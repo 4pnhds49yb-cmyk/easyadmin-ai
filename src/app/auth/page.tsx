@@ -24,7 +24,7 @@ export default function AuthPage() {
     } else {
       const { error } = await supabase.auth.signUp({ email, password })
       if (error) setMessage(error.message)
-      else setMessage('Vérifiez votre email pour confirmer votre inscription !')
+      else router.push('/dashboard')
     }
     setLoading(false)
   }
