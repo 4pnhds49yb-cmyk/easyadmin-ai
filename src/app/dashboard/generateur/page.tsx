@@ -43,6 +43,10 @@ export default function Generateur() {
                 <option value="devis">Devis</option>
                 <option value="email">Email client</option>
                 <option value="linkedin">Post LinkedIn</option>
+                <option value="contrat">Contrat</option>
+<option value="relance">Relance impayée</option>
+<option value="cgv">CGV</option>
+<option value="instagram">Post Instagram</option>
               </select>
             </div>
             <div>
