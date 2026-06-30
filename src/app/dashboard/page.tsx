@@ -73,7 +73,20 @@ export default function Dashboard() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-5">
             <p className="text-xs text-gray-400 mb-1">Crédits restants</p>
-            <p className="text-2xl font-bold text-blue-600">10</p>
+            <p className="text-2xl font-bold text-blue-600">10</p><button
+  onClick={async () => {
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: user?.email })
+    })
+    const data = await res.json()
+    window.location.href = data.url
+  }}
+  className="mt-4 w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-gray-800"
+>
+  Passer au Premium - 9,90€/mois
+</button>
           </div>
         </div>
 
