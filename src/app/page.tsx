@@ -124,7 +124,7 @@ export default function Home() {
               <li className="flex items-center gap-2 text-sm text-gray-400"><span className="text-gray-300 font-bold">✗</span> Historique illimité</li>
               <li className="flex items-center gap-2 text-sm text-gray-400"><span className="text-gray-300 font-bold">✗</span> Chat IA illimité</li>
             </ul>
-            <a href="#" className="block text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-xl hover:bg-gray-200 transition-colors">Commencer gratuitement</a>
+            <a href="/auth"className="block text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-xl hover:bg-gray-200 transition-colors">Commencer gratuitement</a>
           </div>
           <div className="bg-gray-900 border-2 border-gray-900 rounded-2xl p-8 relative">
             <div className="absolute -top-3 right-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAIRE</div>
@@ -140,7 +140,7 @@ export default function Home() {
               <li className="flex items-center gap-2 text-sm text-gray-200"><span className="text-green-400 font-bold">✓</span> Historique illimité</li>
               <li className="flex items-center gap-2 text-sm text-gray-200"><span className="text-green-400 font-bold">✓</span> Chat IA illimité</li>
             </ul>
-            <a href="#" className="block text-center bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition-colors">Passer au Premium</a>
+            <a href="/auth"  className="block text-center bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition-colors">Passer au Premium</a>
           </div>
         </div>
       </section>
