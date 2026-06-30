@@ -33,7 +33,6 @@ export default function Dashboard() {
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Header */}
       <nav className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -53,7 +52,6 @@ export default function Dashboard() {
       </nav>
 
       <div className="max-w-5xl mx-auto px-6 py-10">
-        {/* Bienvenue */}
         <div className="mb-10">
           <h1 className="text-2xl font-bold text-gray-900 mb-1">
             Bonjour 👋
@@ -61,7 +59,6 @@ export default function Dashboard() {
           <p className="text-gray-500">Que voulez-vous créer aujourd'hui ?</p>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-3 gap-4 mb-10">
           <div className="bg-white border border-gray-200 rounded-xl p-5">
             <p className="text-xs text-gray-400 mb-1">Documents générés</p>
@@ -73,24 +70,24 @@ export default function Dashboard() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-5">
             <p className="text-xs text-gray-400 mb-1">Crédits restants</p>
-            <p className="text-2xl font-bold text-blue-600">10</p><button
-  onClick={async () => {
-    const res = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: user?.email })
-    })
-    const data = await res.json()
-    window.location.href = data.url
-  }}
-  className="mt-4 w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-gray-800"
->
-  Passer au Premium - 9,90€/mois
-</button>
+            <p className="text-2xl font-bold text-blue-600">10</p>
+            <button
+              onClick={async () => {
+                const res = await fetch('/api/checkout', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: user?.email })
+                })
+                const data = await res.json()
+                window.location.href = data.url
+              }}
+              className="mt-4 w-full bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-gray-800"
+            >
+              Passer au Premium - 9,90€/mois
+            </button>
           </div>
         </div>
 
-        {/* Outils */}
         <h2 className="text-lg font-bold text-gray-900 mb-4">Vos outils</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
@@ -103,11 +100,11 @@ export default function Dashboard() {
             { emoji: "🎯", title: "Instagram", desc: "Post Instagram" },
             { emoji: "💬", title: "Chat IA", desc: "Assistant IA" },
           ].map((tool, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer">
+            <a key={i} href="/dashboard/generateur" className="bg-white border border-gray-200 rounded-xl p-4 text-center hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer block">
               <div className="text-2xl mb-2">{tool.emoji}</div>
               <p className="text-gray-900 font-semibold text-sm">{tool.title}</p>
               <p className="text-gray-400 text-xs mt-1">{tool.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
