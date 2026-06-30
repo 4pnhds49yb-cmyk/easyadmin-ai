@@ -11,8 +11,8 @@ export default function Home() {
           <span className="font-bold text-gray-900 text-lg">EasyAdmin AI</span>
         </div>
         <div className="flex gap-3">
-          <a href="#" className="text-sm text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Connexion</a>
-          <a href="#" className="text-sm bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700">Essayer gratuitement</a>
+          <a href="/auth" className="text-sm text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100">Connexion</a>
+          <a href="/auth" className="text-sm bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700">Essayer gratuitement</a>
         </div>
       </nav>
 
@@ -28,10 +28,10 @@ export default function Home() {
           Devis, factures, emails, marketing — générez tous vos documents professionnels en quelques secondes.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href="#" className="bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors">
+          <a href="/auth" className="bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors">
             Essayer gratuitement →
           </a>
-          <a href="#" className="bg-white text-gray-800 font-semibold border-2 border-gray-200 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">
+          <a href="/auth" className="bg-white text-gray-800 font-semibold border-2 border-gray-200 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors">
             Voir les fonctionnalités
           </a>
         </div>
